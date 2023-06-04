@@ -82,6 +82,7 @@ const Dashboard = () => {
 
 
     if (status != "authenticated") {
+        console.log(status, "STATUS")
         return <p> You are not signed in, please click here to<Link href="/" className="text-[#346BD4]"> Sign in</Link></p>
     }
 
