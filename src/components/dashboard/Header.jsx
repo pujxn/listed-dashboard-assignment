@@ -14,7 +14,7 @@ const Header = ({ userData }) => {
                     <button><BiSearch /></button>
                 </div>
                 <AiOutlineBell className="text-lg" />
-                <img src="https://lh3.googleusercontent.com/a/AAcHTtfRUMV6Ft4KBE_VlPQpq0aj4PytaJ2-kkyuk-rCVw=s96-c" />
+                <img src={userData.user.image} className="h-12 rounded-[2rem]" alt="profle picture" />
                 {/* <RxAvatar className="text-lg" /> */}
             </div>
         </div>
