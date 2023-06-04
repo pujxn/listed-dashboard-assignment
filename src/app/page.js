@@ -41,6 +41,7 @@ export default function Home() {
 
   return (
 
+
     <div className='flex h-screen'>
       <div className=' bg-black min-w-[36.75rem] flex justify-center items-center'>
         <p className='text-white text-7xl font-bold'>Board.</p>
@@ -73,5 +74,6 @@ export default function Home() {
       </div >
 
     </div >
+
   )
 }

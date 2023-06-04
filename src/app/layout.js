@@ -1,4 +1,8 @@
+"use client";
+
 import './globals.css'
+import { SessionProvider, session } from "next-auth/react"
+
 
 import { Montserrat } from 'next/font/google'
 
@@ -14,7 +18,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className}`}>{children}</body>
+      <body className={`${montserrat.className}`}><SessionProvider session={session}>{children}</SessionProvider></body>
     </html>
+
   )
 }

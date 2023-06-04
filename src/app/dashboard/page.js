@@ -8,6 +8,9 @@ import SidebarList from "@/components/dashboard/sidebar/SidebarList";
 import StatList from "@/components/dashboard/stats/StatList";
 import Link from 'next/link';
 import { useState, useEffect } from "react";
+import { useSession } from "next-auth/react"
+
+
 
 const Dashboard = () => {
 
@@ -42,7 +45,6 @@ const Dashboard = () => {
 
     console.log(singleInstanceData)
 
-
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
             .then(res => res.json())
@@ -76,6 +78,15 @@ const Dashboard = () => {
             })
     }, []);
 
+
+    const { data: session, status } = useSession()
+
+
+    if (status != "authenticated") {
+        return <p> You are not signed in, please click here to<Link href="/api/auth/signin" className="text-[#346BD4]"> Sign in</Link></p>
+    }
+
+
     if (isLoading) {
         return <p>Loading...</p>
     }
@@ -108,7 +119,7 @@ const Dashboard = () => {
                         </div>
                         <div className="bg-white rounded-[1.25rem] py-[1.875rem] px-10">
                             <p className="text-lg font-bold">Activities</p>
-                            <a href="" className="text-sm text-[#999999]">May-June 2021</a>
+                            <a href="" className="text-sm text-[#999999]">May-June 2021 &#9660;</a>
                             <LineChart userData={userData} guestData={guestData} />
                         </div>
                         <div className="flex justify-between">
