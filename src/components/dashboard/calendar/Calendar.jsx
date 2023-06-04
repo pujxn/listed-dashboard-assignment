@@ -21,7 +21,7 @@ const Calendar = () => {
     return (
         <div className="py-[1.875rem] px-10 flex flex-col  h-full">
             <div className="flex justify-between mb-5">
-                <span className="text-lg font-bold">Today's schedule</span>
+                <span className="text-lg font-bold">Today&apos;s schedule</span>
                 <a href="" className="text-[#999999] text-xs">See all &gt;</a>
             </div>
             <div>

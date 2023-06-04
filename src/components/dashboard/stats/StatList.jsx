@@ -11,7 +11,7 @@ const StatList = ({ data }) => {
 
     const colorList = ["bg-[#DDEFE0]", "bg-[#F4ECDD]", "bg-[#EFDADA]", "bg-[#DEE0EF]"]
 
-    const iconList = [<LuBanknote />, <BsTags />, <GoThumbsup />, <FiUsers />]
+    const iconList = [<LuBanknote key={0} />, <BsTags key={1} />, <GoThumbsup key={2} />, <FiUsers key={3} />]
 
     const statCardInfo = statList.map((ele, idx) => {
         return [ele, colorList[idx], iconList[idx]];
