@@ -82,7 +82,7 @@ const Dashboard = () => {
 
 
     if (status != "authenticated") {
-        return <p> You are not signed in, please click here to<Link href="/api/auth/signin" className="text-[#346BD4]"> Sign in</Link></p>
+        return <p> You are not signed in, please click here to<Link href="/" className="text-[#346BD4]"> Sign in</Link></p>
     }
 
 
