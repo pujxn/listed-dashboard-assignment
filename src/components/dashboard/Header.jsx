@@ -2,7 +2,7 @@ import { AiOutlineBell } from "react-icons/ai"
 import { RxAvatar } from "react-icons/rx"
 import { BiSearch } from "react-icons/bi"
 
-const Header = () => {
+const Header = ({ userData }) => {
     return (
         <div className="flex justify-between">
             <div>
@@ -13,7 +13,8 @@ const Header = () => {
                     <input type="text" placeholder="Search..." className="rounded-[0.625rem] px-1" />
                     <button><BiSearch /></button>
                 </div>
-                <AiOutlineBell className="text-lg" />
+                {/* <AiOutlineBell className="text-lg" /> */}
+                <div>{userData.user.image}</div>
                 <RxAvatar className="text-lg" />
             </div>
         </div>

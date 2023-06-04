@@ -16,7 +16,7 @@ const Dashboard = () => {
 
     const { data, status } = useSession()
 
-    console.log(data, "DATA");
+    // console.log(data, "DATA");
 
 
     const [singleInstanceData, setSingleInstanceData] = useState({
@@ -117,7 +117,7 @@ const Dashboard = () => {
                 <div className="  w-full pt-5 pb-10">
                     <div className="flex flex-col gap-10">
                         <div>
-                            <Header className="mb-10" />
+                            <Header className="mb-10" userData={data} />
                         </div>
                         <div>
                             <StatList data={singleInstanceData} />
