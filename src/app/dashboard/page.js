@@ -14,6 +14,9 @@ import { useSession } from "next-auth/react"
 
 const Dashboard = () => {
 
+    const { data: session, status } = useSession()
+
+
     const [singleInstanceData, setSingleInstanceData] = useState({
         "Revenue": null,
         "Transactions": null,
@@ -78,18 +81,17 @@ const Dashboard = () => {
     }, []);
 
 
-    const { data: session, status } = useSession()
 
     console.log(status, "STATUS")
 
 
-    if (status != "authenticated") {
-        return <p> You are not signed in, please click here to<Link href="/" className="text-[#346BD4]"> Sign in</Link></p>
-    }
-
 
     if (isLoading) {
         return <p>Loading...</p>
+    }
+
+    if (status != "authenticated") {
+        return <p> You are not signed in, please click here to<Link href="/" className="text-[#346BD4]"> Sign in</Link></p>
     }
 
 
