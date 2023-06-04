@@ -16,9 +16,10 @@ const handler = NextAuth({
         async signIn() {
             return "/dashboard"
         },
-        // async redirect(url, baseUrl) {
-        //     return baseUrl
-        // }
+        async redirect({ baseUrl }) {
+            console.log(baseUrl)
+            return baseUrl;
+        }
     }
 
 })
