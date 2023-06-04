@@ -14,10 +14,10 @@ const handler = NextAuth({
     },
     callbacks: {
         // async signIn() {
-        //     return "/"
+        //     return true
         // },
         async redirect({ baseUrl }) {
-            console.log(baseUrl)
+            // console.log(baseUrl)
             return "/dashboard";
         }
     }

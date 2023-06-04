@@ -14,7 +14,9 @@ import { useSession } from "next-auth/react"
 
 const Dashboard = () => {
 
-    const { data: session, status } = useSession()
+    const { data, status } = useSession()
+
+    console.log(data, "DATA");
 
 
     const [singleInstanceData, setSingleInstanceData] = useState({
@@ -46,7 +48,7 @@ const Dashboard = () => {
 
     const [isLoading, setIsLoading] = useState(true);
 
-    console.log(singleInstanceData)
+    // console.log(singleInstanceData)
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
@@ -82,7 +84,7 @@ const Dashboard = () => {
 
 
 
-    console.log(status, "STATUS")
+    // console.log(status, "STATUS")
 
 
 
