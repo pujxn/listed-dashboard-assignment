@@ -74,7 +74,6 @@ const Dashboard = () => {
                     "Custom Short Pants": json[10]["price"],
                     "Super Hoodies": json[11]["price"]
                 })
-                console.log(json)
             })
     }, []);
 

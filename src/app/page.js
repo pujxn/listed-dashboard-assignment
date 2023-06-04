@@ -16,16 +16,10 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [providers, setProviders] = useState();
 
-  console.log("providers", providers)
-
-  console.log("Here 0")
 
   const getProvidersFn = async () => {
-    console.log("HERE 1")
     const fetchedProviders = await getProviders();
     setProviders(fetchedProviders);
-    console.log("HERE 2")
-    console.log("Providers", providers)
     setIsLoading(false);
   }
 
