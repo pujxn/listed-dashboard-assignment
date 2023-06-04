@@ -13,9 +13,9 @@ const Header = ({ userData }) => {
                     <input type="text" placeholder="Search..." className="rounded-[0.625rem] px-1" />
                     <button><BiSearch /></button>
                 </div>
-                {/* <AiOutlineBell className="text-lg" /> */}
-                <div>{userData.user.image}</div>
-                <RxAvatar className="text-lg" />
+                <AiOutlineBell className="text-lg" />
+                <img src="https://lh3.googleusercontent.com/a/AAcHTtfRUMV6Ft4KBE_VlPQpq0aj4PytaJ2-kkyuk-rCVw=s96-c" />
+                {/* <RxAvatar className="text-lg" /> */}
             </div>
         </div>
 
