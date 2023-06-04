@@ -12,8 +12,11 @@ const handler = NextAuth({
         signIn: "/"
     },
     callbacks: {
-        async redirect() {
+        async signIn() {
             return "/dashboard"
+        },
+        async redirected() {
+            return "/"
         }
     }
 
